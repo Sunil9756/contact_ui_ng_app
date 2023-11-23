@@ -19,8 +19,8 @@ pipeline{
         }
         stage(deploy){
            steps{
-               echo "push"
-               sh "pm2 restart all"
+                echo "push"
+                sh "pm2 restart all"
                 }   
               }
   }
