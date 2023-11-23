@@ -6,15 +6,18 @@ pipeline{
              branch:main;
              url:https://github.com/Sunil9756/contact_ui_ng_app.git
          }
+         }  
         stage(build){
            steps{
-            sh "mvn clean package"
+            echo "build"
          }
+        }
         stage(image){
            steps{
-            sh "docker build -t imagename"
+            echo "image"
          }
-        stage(){
+        }
+        stage(push){
            steps{
                echo "push"
                 }   
