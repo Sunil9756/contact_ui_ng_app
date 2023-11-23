@@ -1,10 +1,9 @@
 pipeline{
      agent any
        stages{
-         stage(git checkout){
+         stage("git checkout"){
            steps{
-             branch:main;
-             url:https://github.com/Sunil9756/contact_ui_ng_app.git
+             ech "url"
          }
          }  
         stage(build){
@@ -21,6 +20,6 @@ pipeline{
            steps{
                echo "push"
                 }   
-     }
+              }
   }
 }
