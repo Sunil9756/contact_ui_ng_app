@@ -9,7 +9,7 @@ pipeline{
         stage("install node module"){
            steps{
             script{
-               sh script.sh
+               sh "script.sh"
              }
          }
         }
