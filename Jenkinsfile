@@ -8,8 +8,10 @@ pipeline{
          }  
         stage("install node module"){
            steps{
-            echo "build"
-            sh "npm install" 
+            script{
+               sh 'npm install'
+               sh 'npm run build:${ENV}'
+             }
          }
         }
         stage("build"){
