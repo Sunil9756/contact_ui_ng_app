@@ -6,19 +6,22 @@ pipeline{
              git url:"https://github.com/Sunil9756/contact_ui_ng_app.git", branch:"main"
          }
          }  
-        stage(build){
+        stage("install node module"){
            steps{
             echo "build"
+            sh "npm install" 
          }
         }
-        stage(image){
+        stage("build"){
            steps{
             echo "image"
+            sh "npm run build:ssr" 
          }
         }
-        stage(push){
+        stage(deploy){
            steps{
                echo "push"
+               sh "pm2 restart all"
                 }   
               }
   }
