@@ -3,7 +3,7 @@ pipeline{
        stages{
          stage("git checkout"){
            steps{
-             ech "url"
+             git url:"https://github.com/Sunil9756/contact_ui_ng_app.git", branch:"main"
          }
          }  
         stage(build){
