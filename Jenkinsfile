@@ -1,6 +1,5 @@
 pipeline{
      agent any
-       nodejs 18.0.0
        stages{
          stage("git checkout"){
            steps{
